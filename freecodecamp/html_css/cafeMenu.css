@@ -4,6 +4,7 @@ h1, h2, p {
 
 body {
     background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
 }
 
 .menu {
@@ -11,8 +12,8 @@ body {
     background-color: burlywood;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
+    max-width: 500px;
 }
 
 .flavor, .dessert {
