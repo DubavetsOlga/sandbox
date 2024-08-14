@@ -6,6 +6,21 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+const locations = [
+    {
+        name: "town square",
+        "button text": ["Go to store", "Go to cave", "Fight dragon"],
+        "button functions": [goStore, goCave, fightDragon],
+        text: "You are in the town square. You see a sign that says \"Store\"."
+    },
+    {
+        name: "store",
+        "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+        "button functions": [buyHealth, buyWeapon, goTown],
+        text: "You enter the store."
+    }
+];
+
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -30,7 +45,7 @@ function goTown() {
     button2.onclick = goCave;
     button3.onclick = fightDragon;
     text.innerText = "You are in the town square. You see a sign that says \"Store\".";
-  }
+}
 
 function goStore() {
     button1.innerText = "Buy 10 health (10 gold)";
@@ -58,4 +73,8 @@ function buyHealth() {
 
 function buyWeapon() {
   
+}
+
+function update(location) {
+
 }
