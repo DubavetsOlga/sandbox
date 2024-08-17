@@ -186,6 +186,8 @@ function attack() {
     health -= monsters[fighting].level;
     if (isMonsterHit()) {
         monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
+    } else {
+        text.innerText += " You miss."
     }
     healthText.innerText = health;
     monsterHealthText.innerText = monsterHealth;
