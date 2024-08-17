@@ -36,7 +36,13 @@ const locations = [
         "button text": ["Go to town square", "Go to town square", "Go to town square"],
         "button functions": [goTown, goTown, goTown],
         text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
-    }
+    },
+    {
+        name: "lose",
+        "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+        "button functions": [restart, restart, restart],
+        text: "You die. &#x2620;"
+    },
 ];
 
 const button1 = document.querySelector("#button1");
