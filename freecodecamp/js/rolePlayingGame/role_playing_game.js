@@ -247,3 +247,7 @@ function getMonsterAttackValue(level) {
 function isMonsterHit() {
     return Math.random() > .2 || health < 20;
 }
+
+function easterEgg() {
+    update(locations[7]);
+}
