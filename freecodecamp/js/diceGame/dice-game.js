@@ -98,6 +98,13 @@ const resetRadioOptions = () => {
     span.textContent = "";
   });
 };
+
+const updateScore = (selectedValue, achieved) => {
+  score += parseInt(selectedValue);
+  totalScoreElement.textContent = score;
+
+  scoreHistory.innerHTML += `<li>${achieved} : ${selectedValue}</li>`;
+};
   
 rollDiceBtn.addEventListener("click", () => {
     if (rolls === 3) {
