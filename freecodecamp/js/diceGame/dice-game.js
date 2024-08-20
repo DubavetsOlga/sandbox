@@ -13,43 +13,38 @@ const rulesBtn = document.getElementById("rules-btn");
 let diceValuesArr = [];
 let isModalShowing = false;
 let score = 0;
-let round = 1; 
-let rolls = 0; 
-
-rulesBtn.addEventListener("click", () => {
-  isModalShowing = !isModalShowing;
-
-  if (isModalShowing) {
-    rulesBtn.textContent = "Hide rules";
-    rulesContainer.style.display = "block";
-  } else {
-    rulesBtn.textContent = "Show rules";
-    rulesContainer.style.display = "none";
-  }
-});
+let round = 1;
+let rolls = 0;
 
 const rollDice = () => {
-    diceValuesArr = [];
-  
-    for (let i = 0; i < 5; i++) {
-      const randomDice = Math.floor(Math.random() * 6) + 1;
-      diceValuesArr.push(randomDice);
-    };
-  
-    listOfAllDice.forEach((dice, index) => {
-      dice.textContent = diceValuesArr[index];
-    });
+  diceValuesArr = [];
+
+  for (let i = 0; i < 5; i++) {
+    const randomDice = Math.floor(Math.random() * 6) + 1;
+    diceValuesArr.push(randomDice);
+  };
+
+  listOfAllDice.forEach((dice, index) => {
+    dice.textContent = diceValuesArr[index];
+  });
 };
-  
+
 const updateStats = () => {
-    rollsElement.textContent = rolls;
-    roundElement.textContent = round;
+  rollsElement.textContent = rolls;
+  roundElement.textContent = round;
 };
 
 const updateRadioOption = (index, score) => {
-    scoreInputs[index].disabled = false;
-    scoreInputs[index].value = score;
-    scoreSpans[index].textContent = `, score = ${score}`;
+  scoreInputs[index].disabled = false;
+  scoreInputs[index].value = score;
+  scoreSpans[index].textContent = `, score = ${score}`;
+};
+
+const updateScore = (selectedValue, achieved) => {
+  score += parseInt(selectedValue);
+  totalScoreElement.textContent = score;
+
+  scoreHistory.innerHTML += `<li>${achieved} : ${selectedValue}</li>`;
 };
 
 const getHighestDuplicates = (arr) => {
@@ -99,23 +94,48 @@ const resetRadioOptions = () => {
   });
 };
 
-const updateScore = (selectedValue, achieved) => {
-  score += parseInt(selectedValue);
-  totalScoreElement.textContent = score;
+const resetGame = () => {
+  diceValuesArr = [0, 0, 0, 0, 0];
+  score = 0;
+  round = 1;
+  rolls = 0;
 
-  scoreHistory.innerHTML += `<li>${achieved} : ${selectedValue}</li>`;
+  listOfAllDice.forEach((dice, index) => {
+    dice.textContent = diceValuesArr[index];
+  });
+
+  totalScoreElement.textContent = score;
+  scoreHistory.innerHTML = "";
+
+  rollsElement.textContent = rolls;
+  roundElement.textContent = round;
+
+  resetRadioOptions();
 };
-  
+
 rollDiceBtn.addEventListener("click", () => {
-    if (rolls === 3) {
-      alert("You have made three rolls this round. Please select a score.");
-    } else {
-      resetRadioOptions();
-      rolls++;
-      rollDice();
-      updateStats();
-      getHighestDuplicates(diceValuesArr);
-    }
+  if (rolls === 3) {
+    alert("You have made three rolls this round. Please select a score.");
+  } else {
+    rolls++;
+    resetRadioOptions();
+    rollDice();
+    updateStats();
+    getHighestDuplicates(diceValuesArr);
+  
+  }
+});
+
+rulesBtn.addEventListener("click", () => {
+  isModalShowing = !isModalShowing;
+
+  if (isModalShowing) {
+    rulesBtn.textContent = "Hide rules";
+    rulesContainer.style.display = "block";
+  } else {
+    rulesBtn.textContent = "Show rules";
+    rulesContainer.style.display = "none";
+  }
 });
 
 keepScoreBtn.addEventListener("click", () => {
@@ -139,6 +159,7 @@ keepScoreBtn.addEventListener("click", () => {
     if (round > 6) {
       setTimeout(() => {
         alert(`Game Over! Your total score is ${score}`);
+        resetGame();
       }, 500);
     }
   } else {
