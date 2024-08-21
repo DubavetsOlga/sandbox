@@ -116,3 +116,9 @@ body {
     background-color: #fff;
     border-radius: 60%;
 }
+
+.cat-nose {
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 20px solid #442c2c;
+}
