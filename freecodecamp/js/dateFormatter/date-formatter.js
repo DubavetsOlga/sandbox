@@ -17,5 +17,6 @@ dateOptionsSelectElement.addEventListener("change", () => {
                 .split("-")
                 .reverse()
                 .join("-");
+            break;    
     }
 });
