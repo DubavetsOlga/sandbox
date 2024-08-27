@@ -8,6 +8,9 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 
+const exampleSentence = "selur pmaCedoCeerf".split();
+console.log(exampleSentence);
+
 currentDateParagraph.textContent = formattedDate;
 
 dateOptionsSelectElement.addEventListener("change", () => {
