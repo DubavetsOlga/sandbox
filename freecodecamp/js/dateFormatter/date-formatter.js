@@ -17,6 +17,10 @@ dateOptionsSelectElement.addEventListener("change", () => {
                 .split("-")
                 .reverse()
                 .join("-");
-            break;    
+            break;
+            
+        case "mm-dd-yyyy-h-mm":
+            currentDateParagraph.textContent = ``;
+            break;
     }
 });
