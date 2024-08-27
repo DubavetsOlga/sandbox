@@ -8,7 +8,7 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 const formattedDate = `${day}-${month}-${year}`;
 
-const exampleSentence = "selur pmaCedoCeerf".split('');
+const exampleSentence = "selur pmaCedoCeerf".split("").reverse();
 console.log(exampleSentence);
 
 currentDateParagraph.textContent = formattedDate;
