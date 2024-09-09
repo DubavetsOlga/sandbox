@@ -78,3 +78,7 @@ body {
 .penguin *{
     position: absolute;
 }
+
+.penguin-body::before {
+    content: "";
+}
