@@ -119,3 +119,9 @@ body {
 :root {
     --penguin-face: white;
 }
+
+.eye {
+    width: 15%;
+    height: 17%;
+    background-color: black;
+}
