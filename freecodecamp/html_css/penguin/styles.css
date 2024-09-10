@@ -166,3 +166,10 @@ body {
     background-color: orange;
     border-radius: 50%;
 }
+
+
+.beak.top {
+    width: 20%;
+    top: 60%;
+    left: 40%;
+}
