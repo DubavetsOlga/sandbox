@@ -184,3 +184,7 @@ body {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
 }
+
+.shirt div {
+    font-weight: normal;
+}
