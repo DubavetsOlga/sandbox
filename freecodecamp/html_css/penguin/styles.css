@@ -194,3 +194,9 @@ body {
     top: 22.5px;
     left: 12px;
 }
+
+.foot {
+    width: 15%;
+    height: 30%;
+    background-color: orange;
+}
