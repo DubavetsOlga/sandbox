@@ -24,6 +24,7 @@ body {
     margin-top: 75px;
     position: relative;
     z-index: 4;
+    transition: 1s ease-in-out 0ms;
 }
 
 .ground {
@@ -119,7 +120,7 @@ body {
 :root {
     --penguin-face: white;
     --penguin-picorna: orange;
-    --penguin-skin: gray;
+    --penguin-skin: grey;
 }
 
 .eye {
