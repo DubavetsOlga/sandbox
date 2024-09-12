@@ -255,3 +255,7 @@ body {
         transform: rotate(130deg) scaleX(-1);
     }
 }
+
+.penguin:active {
+    transform: scale(1.5);
+}
