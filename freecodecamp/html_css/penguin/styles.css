@@ -243,7 +243,7 @@ body {
     }
 
     20% {
-
+        transform: rotate(130deg) scaleX(-1);
     }
 
     30% {
