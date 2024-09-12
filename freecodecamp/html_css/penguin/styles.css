@@ -258,4 +258,5 @@ body {
 
 .penguin:active {
     transform: scale(1.5);
+    cursor: not-allowed;
 }
