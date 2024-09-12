@@ -214,3 +214,9 @@ body {
     right: 25%;
     transform: rotate(-80deg);
 }
+
+.arm {
+    width: 30%;
+    height: 60%;
+    background: linear-gradient(90deg, gray, rgb(209, 210, 199));
+}
