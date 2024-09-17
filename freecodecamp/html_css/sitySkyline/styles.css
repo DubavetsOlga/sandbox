@@ -178,3 +178,9 @@ body {
     position: absolute;
     top: 0;
 }
+
+.window-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
