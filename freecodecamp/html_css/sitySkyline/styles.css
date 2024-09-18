@@ -223,6 +223,12 @@ body {
     left: 10%;
 }
 
+.fb4-window {
+    width: 30%;
+    height: 10%;
+    border-radius: 50%;
+}
+
 .fb4b {
     width: 100%;
     height: 89%;
