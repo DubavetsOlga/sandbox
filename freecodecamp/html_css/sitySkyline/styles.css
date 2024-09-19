@@ -27,6 +27,10 @@ body {
     justify-content: space-evenly;
 }
 
+.sky {
+    background: radial-gradient(#ffcf33 0%, #ffcf33 20%, #ffff66 21%, #bbeeff 100%);
+}
+
 .building-wrap {
     display: flex;
     flex-direction: column;
