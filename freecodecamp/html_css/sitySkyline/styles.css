@@ -300,3 +300,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
+
+@media (max-width: 1000px) {
+
+}
