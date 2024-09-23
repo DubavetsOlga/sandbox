@@ -17,3 +17,7 @@ function isInvalidInput(str) {
 
     return str.match(regex);
 }
+
+function addEntry() {
+    
+}
