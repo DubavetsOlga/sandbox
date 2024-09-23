@@ -18,4 +18,4 @@ function isInvalidInput(str) {
     return str.match(regex);
 }
 
-console.log(isInvalidInput("1e3"));
+console.log(isInvalidInput("10"));
