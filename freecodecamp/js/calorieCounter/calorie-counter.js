@@ -17,5 +17,3 @@ function isInvalidInput(str) {
 
     return str.match(regex);
 }
-
-console.log(isInvalidInput("10"));
